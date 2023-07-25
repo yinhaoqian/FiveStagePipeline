@@ -57,9 +57,11 @@ must have an LED that turns red when the processor is halted.
 The program counter is a register that holds an 8-bit instruction address. It specifies the instruction to fetch 
 from the instruction memory. It is updated every clock cycle with PC + 1 or the target address of a taken 
 branch (or jump).
+
 **Pipeline Latches/Register**
 To guarantee that portions of the datapath could be shared during instruction execution, we need to place 
 registers between adjacent pipeline stages. Note there is no pipeline register at the end of write back stage. 
+
 **Forwarding Unit and Hazard Unit**
 Both data hazard and control hazard should be considered in this project. (There’s no structure hazard since 
 each instruction only takes one cycle in each stage). 
