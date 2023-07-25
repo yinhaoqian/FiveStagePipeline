@@ -16,8 +16,6 @@ The objective of this project is to design and implement a five-stage pipeline f
 _This project is part of the ECE 1110 - Computer Organization and Architecture class offered at the University of Pittsburgh._
 ## Screenshot
 ![alt text](https://github.com/yinhaoqian/LogisimFiveStagePipeline/blob/main/pictures/Main%20Interface.PNG)
-## Video Demostration
-[![Watch the video](https://img.youtube.com/vi/5xXs9az-O4I/maxresdefault.jpg)](https://youtu.be/5xXs9az-O4I)
 ## Instructions
 In the following table, the symbol "X" denotes that the Subop field (refer to the description below) is not applicable for I-format instructions. Notably, there are certain distinctions between this project and the standard RISC-V instructions. Primarily, this project adopts a "two-operand" instruction set, wherein each instruction involves a maximum of two operands—comprising source and destination operands. In this instruction format, one of the source operands (registers) also serves as the destination. Nevertheless, the majority of instructions retain similar functionality to their RISC-V counterparts:
 ![alt text](https://github.com/yinhaoqian/LogisimFiveStagePipeline/blob/main/pictures/Instruction%20Set.PNG)
@@ -88,3 +86,6 @@ Both data hazard and control hazard should be considered in this project. (There
 each instruction only takes one cycle in each stage). 
 Data hazard can be classified into EX hazard and MEM hazard, based on different kinds of instruction pairs 
 which cause the hazard.
+
+## Video Demostration
+[![Watch the video](https://img.youtube.com/vi/5xXs9az-O4I/maxresdefault.jpg)](https://youtu.be/5xXs9az-O4I)
