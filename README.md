@@ -1,11 +1,5 @@
 # Logisim Five-Stage Pipeline
-The objective of this project is to design and implement a five-stage pipeline for an Instruction Set Architecture (ISA) inspired by RISC-V in Logisim. The pipeline will consist of Fetch, Decode, Execute, Memory, and Writeback stages. The project aims to develop the necessary function units, control units, and registers to create an efficient and functional processor in a pipeline architecture. Additionally, the project will address data hazards and control hazards, employing suitable techniques to ensure correct execution in the presence of these hazards. 
-
-_This project is part of the ECE 1110 - Computer Organization and Architecture class offered at the University of Pittsburgh._
-## Screenshot
-![alt text](https://github.com/yinhaoqian/LogisimFiveStagePipeline/blob/main/pictures/Main%20Interface.PNG)
-## Introduction
-This is an implementation of a five-stage pipelined processor, comprising the following components:
+The objective of this project is to design and implement a five-stage pipeline for an Instruction Set Architecture (ISA) inspired by RISC-V in Logisim. The pipeline will consist of Fetch, Decode, Execute, Memory, and Writeback stages. The project aims to develop the necessary function units, control units, and registers to create an efficient and functional processor in a pipeline architecture. Additionally, the project will address data hazards and control hazards, employing suitable techniques to ensure correct execution in the presence of these hazards. The implementtion comprises the following components:
 1. A program counter and fetch adder responsible for fetching instructions.
 2. An instruction memory that stores the program instructions.
 3. A register file for storing and accessing data during execution.
@@ -18,6 +12,10 @@ This is an implementation of a five-stage pipelined processor, comprising the fo
 10. A hazard unit to handle potential hazards during instruction execution.
 11. An LED hexadecimal display for visual feedback.
 12. An LED indicator to signal when the processor has halted.
+
+_This project is part of the ECE 1110 - Computer Organization and Architecture class offered at the University of Pittsburgh._
+## Screenshot
+![alt text](https://github.com/yinhaoqian/LogisimFiveStagePipeline/blob/main/pictures/Main%20Interface.PNG)
 ## Instructions
 In the following table, the symbol "X" denotes that the Subop field (refer to the description below) is not applicable for I-format instructions. Notably, there are certain distinctions between this project and the standard RISC-V instructions. Primarily, this project adopts a "two-operand" instruction set, wherein each instruction involves a maximum of two operands—comprising source and destination operands. In this instruction format, one of the source operands (registers) also serves as the destination. Nevertheless, the majority of instructions retain similar functionality to their RISC-V counterparts:
 ![alt text](https://github.com/yinhaoqian/LogisimFiveStagePipeline/blob/main/pictures/Instruction%20Set.PNG)
