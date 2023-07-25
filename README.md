@@ -1,4 +1,5 @@
 # Logisim Five-Stage Pipeline
+The objective of this project is to design and implement a five-stage pipeline for an Instruction Set Architecture (ISA) inspired by RISC-V in Logisim. The pipeline will consist of Fetch, Decode, Execute, Memory, and Writeback stages. The project aims to develop the necessary function units, control units, and registers to create an efficient and functional processor in a pipeline architecture. Additionally, the project will address data hazards and control hazards, employing suitable techniques to ensure correct execution in the presence of these hazards. Additionally, This project is part of the ECE 1110 - Computer Organization and Architecture class offered at the University of Pittsburgh.
 ## Screenshot
 ![alt text](https://github.com/yinhaoqian/LogisimFiveStagePipeline/blob/main/pictures/Main%20Interface.PNG)
 ## Introduction
