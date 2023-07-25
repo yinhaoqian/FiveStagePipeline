@@ -28,41 +28,59 @@ In this implmentation, two instruction formats are utilized: R and I. The R-form
 | Opcode (6 bits) | Rd (5 bits) | Rs (5 bits) | Imm (8 bits) |
 ```
 ## Components
+
 **Registers**
+
 There are 8 registers, labeled $r0 to $r7. In this project, $r0 is not 0. It’s a general register and can be used 
 like any other register. The registers are 16 bits wide. An R-format instruction can read 2 source registers 
 and write 1 destination register. Thus, the register file has 2 read ports and 1 write port.
+
 **Instruction Memory**
+
 This component is a ROM configured to hold 256 16-bit instructions. You should use the ROM in 
 Logisim’s Memory library. In your implementation, the ROM must be visible in the main circuit. The 
 ROM’s contents will hold the set of instructions for a program.
+
 **Data Memory**
+
 This component is a RAM configured to hold 256 16-bit words. You should use the RAM in Logisim’s 
 Memory library. In your implementation, the RAM must be visible in the main circuit. 
+
 **Arithmetic Logic Unit (ALU)**
+
 The ALU is used in the arithmetic instructions, memory instructions and branch instructions. It can do 
 addition, subtraction and comparison. 
+
 **Decoder**
+
 This component takes the instruction opcode as an input and generates control signals for the data path in 
 each stage as outputs.
+
 **LED Hexadecimal Display**
+
 This project has a four digit hexadecimal (16 bit) display. Instruction “put” outputs a register value to this 
 display. The contents of a put’s source register (16-bit value) is output on the display. A value that is “put” 
 must remain until the next put is executed.
+
 **Halting Processor Execution**
+
 When halt is executed, the processor should stop fetching instructions. But the instructions which are 
 already in the pipeline should be finished one by one. After all the instructions are done, the main circuit 
 must have an LED that turns red when the processor is halted. 
+
 **Program Counter**
+
 The program counter is a register that holds an 8-bit instruction address. It specifies the instruction to fetch 
 from the instruction memory. It is updated every clock cycle with PC + 1 or the target address of a taken 
 branch (or jump).
 
 **Pipeline Latches/Register**
+
 To guarantee that portions of the datapath could be shared during instruction execution, we need to place 
 registers between adjacent pipeline stages. Note there is no pipeline register at the end of write back stage. 
 
 **Forwarding Unit and Hazard Unit**
+
 Both data hazard and control hazard should be considered in this project. (There’s no structure hazard since 
 each instruction only takes one cycle in each stage). 
 Data hazard can be classified into EX hazard and MEM hazard, based on different kinds of instruction pairs 
